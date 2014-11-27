@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<!-- app中必须要写的，让页面的尺寸和设备大小保持一致 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- 如果你不希望手机自动将网页中的电话号码显示为拨号的超链接，那么可以这样写： -->
+		<meta name="format-detection" content="telephone=no"/>
+		<!-- 让页面全屏显示，苹果手机OS2.1以上有效 -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- 这个是设置状态条的样式，一般不起作用，除非使用了全屏显示 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- 苹果为iOS设备配备了apple-touch-icon私有属性，添加该属性，在iPhone,iPad,iTouch的safari浏览器上可以使用添加到主屏按钮将网站添加到主屏幕上，方便用户以后访问 -->
+		<!-- apple-touch-icon 标签支持sizes属性，可以用来放置对应不同的设备。57×57（默认值）的图标对应320×640的iphone老设备，72×72对应ipad，114×114对应retina屏的iPhone及iTouch。ipad3对应144×144的高分辨率 -->
+		<link rel="apple-touch-icon" href="http://p2.qhimg.com/t01b0f56b331d358632.png" />
+		
+		<!-- ClearType主要是针对LCD液晶显示器设计，可提高文字的清晰度。 -->
+		<meta http-equiv="cleartype" content="on">
+		<title>彩票</title>
+		<link rel="stylesheet" href="/css/Jingle.css">
+	</head>
+	<body>
+		<header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="index.html" class="navbar-brand">Jingle</a>
+				</div>
+			</div>
+		</header>
+		
+		
+		<footer>
+			<a href="#list_article" data-target="article" data-icon="list" class="active"><i class="icon list"></i>list</a>
+			<a href="#inset_list_article" data-target="article" data-icon="stack"><i class="icon stack"></i>inset list</a>
+		</footer>
+		
+		
+		<script type="text/javascript" src="js/lib/zepto.js"></script>
+		<script type="text/javascript" src="js/lib/iscroll.js"></script>
+		<script type="text/javascript" src="js/lib/template.min.js"></script>
+		<script type="text/javascript" src="js/lib/Jingle.debug.js"></script>
+		<!---PC端测试时需要这个文件，将click事件模拟成touch事件，正式上线删除该js文件即可--->
+		<script type="text/javascript" src="js/lib/zepto.touch2mouse.js"></script>
+	</body>
+</html>
