@@ -20,26 +20,44 @@
 		<link rel="stylesheet" href="/css/Jingle.css">
 	</head>
 	<body>
-		<header class="navbar navbar-inverse navbar-fixed-top" role="banner">
-			<div class="container">
-				<div class="navbar-header">
-					<a href="index.html" class="navbar-brand">Jingle</a>
-				</div>
-			</div>
-		</header>
+		<div id="aside_container"><!---侧边栏容器--->
+			<aside id="index_aside" data-position="left" data-transition="reveal" data-show-close="true">
+				侧边栏
+			</aside>			
+		</div>
+		<div id="section_container"><!--页面容器--->
+			<section id="index_section" class="active">
+				<!-- 包括头部 -->
+				<% include pub/head.html %>
+				<!-- 包括底部 -->
+				<% include pub/foot.html %>
+				<article class="active">
+					<!---进度条 --->
+					<div data-progress="30" data-title="已完成"></div>
+					<!-- 范围 -->
+					<div  data-rangeinput="right">
+						<input type="range" min="4" max="10" value="7"/>
+					</div>
+					<!-- 复选框 -->
+					<div data-checkbox="unchecked">爱我你就勾勾我</div>
+					<!-- slider -->
+					<div id="sliderId">
+						<div>
+							<div>slider1</div>
+							<div>slider2</div>
+							<div>slider2</div>
+						</div>
+					</div>
+				</article>
+			</section>
+		</div>
 		
 		
-		<footer>
-			<a href="#list_article" data-target="article" data-icon="list" class="active"><i class="icon list"></i>list</a>
-			<a href="#inset_list_article" data-target="article" data-icon="stack"><i class="icon stack"></i>inset list</a>
-		</footer>
 		
-		
-		<script type="text/javascript" src="js/lib/zepto.js"></script>
-		<script type="text/javascript" src="js/lib/iscroll.js"></script>
-		<script type="text/javascript" src="js/lib/template.min.js"></script>
-		<script type="text/javascript" src="js/lib/Jingle.debug.js"></script>
-		<!---PC端测试时需要这个文件，将click事件模拟成touch事件，正式上线删除该js文件即可--->
-		<script type="text/javascript" src="js/lib/zepto.touch2mouse.js"></script>
+		<!-- 输出js脚本 -->
+		<% include pub/footjs.html %>
+		<script type="text/javascript">
+			Jingle.launch();
+		</script>
 	</body>
 </html>
