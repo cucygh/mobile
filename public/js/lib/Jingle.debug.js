@@ -116,7 +116,6 @@ J.Element = (function($){
         }else{
             $el.prepend('<i class="icon '+icon+'"></i>');
         }
-
     }
     /**
      * 构造toggle切换组件
@@ -373,7 +372,7 @@ J.Page = (function($){
     var loadSectionRemote = function(url,section){
         var param = J.Util.parseHash(window.location.hash).param;
         loadContent(url,param,function(html){
-            $(section).html(html);
+			$(section).html(html);
             J.Element.init(section);
         });
     }
@@ -401,7 +400,7 @@ J.Page = (function($){
  * 路由控制器
  */
 J.Router = (function($){
-        var _history = [];
+    var _history = [];
     /**
      * 初始化events、state
      */

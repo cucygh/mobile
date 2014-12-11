@@ -26,25 +26,36 @@
 			</aside>
 		</div>
 		<div id="section_container"><!--页面容器--->
-			<section class="active">
+			<section class="active" id="buy">
 				<!-- 包括头部 -->
 				<% include pub/head.html %>
 				<!-- 包括底部 -->
-				<% include pub/foot.html %>
-				<article class="active" id="test1">
+				<footer>
+					<a href="#buy" data-target="section" data-icon="list" class="active"><i class="icon list"></i>购彩</a>
+					<a href="#detail" data-target="section" data-icon="stack"><i class="icon stack"></i>详情</a>
+					<a href="#pay" data-target="section" data-icon="stack"><i class="icon stack"></i>支付</a>
+					<a href="#ssq" data-target="section" data-icon="stack"><i class="icon stack"></i>双色球</a>
+				</footer>
+				<article class="active">
 					<div>购彩</div>
-				</article>
-				
-				<article id="test2">
-					<div>详情</div>
-				</article>
-				
-				<article id="test3">
-					<div>支付</div>
 				</article>
 				
 			</section>
 			
+			<section id="detail">
+				<!-- 包括头部 -->
+				<% include pub/head.html %>
+				<!-- 包括底部 -->
+				<footer>
+					<a href="#buy" data-target="section" data-icon="list"><i class="icon list"></i>购彩</a>
+					<a href="#detail" data-target="section" data-icon="stack" class="active"><i class="icon stack"></i>详情</a>
+					<a href="#pay" data-target="section" data-icon="stack"><i class="icon stack"></i>支付</a>
+					<a href="#ssq" data-target="section" data-icon="stack"><i class="icon stack"></i>双色球</a>
+				</footer>
+				<article class="active">
+					<div>详情</div>
+				</article>
+			</section>
 			
 		</div>
 		
